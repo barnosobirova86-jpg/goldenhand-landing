@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>اليد الذهبية للعناية بالسيارات — XPEL PPF</title>
+  <meta name="description" content="Golden Hand — XPEL PPF, PDR, Nano Ceramic & Polish in Benghazi. اليد الذهبية — أفلام حماية الطلاء XPEL، إصلاح الصدمات، نانو سيراميك وتلميع في بنغازي.">
+  <link rel="canonical" href="https://goldenhandcarcare.ly/">
+  <link rel="icon" href="logo-256.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://goldenhandcarcare.ly/">
+  <meta property="og:title" content="Golden Hand — اليد الذهبية للعناية بالسيارات">
+  <meta property="og:description" content="XPEL PPF · PDR · Nano Ceramic · Polish — Benghazi">
+  <meta property="og:image" content="https://goldenhandcarcare.ly/logo.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Golden Hand — اليد الذهبية للعناية بالسيارات",
+    "url": "https://goldenhandcarcare.ly/",
+    "logo": "https://goldenhandcarcare.ly/logo.png",
+    "image": "https://goldenhandcarcare.ly/logo.png",
+    "telephone": "+218940111555",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Al-Sindbad St., next to Al-Masa Resort",
+      "addressLocality": "Benghazi",
+      "addressCountry": "LY"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 32.0724455, "longitude": 20.139975 },
+    "hasMap": "https://maps.app.goo.gl/cKkkZqKyopALpqBBA",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+      "opens": "09:00", "closes": "21:00"
+    }]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a href="#" class="logo"><img src="logo-256.png" alt=""><span data-site="name"></span></a>
+    <nav class="nav" id="nav">
+      <a href="#services" data-i18n="navServices"></a>
+      <a href="#picker" data-i18n="navPicker"></a>
+      <a href="#compare" data-i18n="navProducts"></a>
+      <a href="#centers" data-i18n="navCenters"></a>
+      <a href="#contact" data-i18n="navContact"></a>
+    </nav>
+    <div class="topbar__right">
+      <button class="lang" id="langBtn">EN</button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__text">
+        <span class="badge badge--dark" data-i18n="heroBadge"></span>
+        <h1 data-i18n="heroTitle"></h1>
+        <p data-i18n="heroText"></p>
+        <div class="btns">
+          <a class="btn btn--accent btn--lg" href="#picker" data-i18n="heroCta"></a>
+          <a class="btn btn--white btn--lg" data-href="tel" data-i18n="heroCall"></a>
+        </div>
+      </div>
+      <img class="hero__logo" src="logo.png" alt="logo">
+    </div>
+  </section>
+
+  <!-- Contact strip -->
+  <section class="wrap help" id="contact">
+    <div class="help__left">
+      <div class="help__icon">📞</div>
+      <div>
+        <p class="muted-light" data-i18n="helpSmall"></p>
+        <h2 data-i18n="helpTitle"></h2>
+      </div>
+    </div>
+    <div class="help__right">
+      <span class="help__brand" data-site="name"></span>
+      <a class="help__phone" dir="ltr" data-href="tel" data-site="phone"></a>
+      <div class="btns">
+        <a class="btn btn--ghost" data-href="tel" data-i18n="call"></a>
+        <a class="btn btn--wa" data-href="whatsapp" target="_blank" rel="noopener" data-i18n="whatsapp"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="wrap services" id="services">
+    <h2 class="section-title" data-i18n="servicesTitle"></h2>
+    <div class="services__grid" id="servicesGrid"></div>
+  </section>
+
+  <!-- Film picker -->
+  <section class="wrap calc" id="picker">
+    <div class="calc__head">
+      <h2 data-i18n="pickerTitle"></h2>
+      <p data-i18n="pickerText"></p>
+    </div>
+
+    <div class="calc__body">
+      <div class="grid2">
+        <label class="field"><span data-i18n="vehicle"></span><select id="segment"></select></label>
+        <label class="field"><span data-i18n="product"></span><select id="product"></select></label>
+      </div>
+
+      <div class="grid2">
+        <div class="card">
+          <h3 class="card__title" data-i18n="details"></h3>
+          <div id="details"></div>
+        </div>
+        <div class="card">
+          <h3 class="card__title" data-i18n="whyXpel"></h3>
+          <ul class="checks" id="whyList"></ul>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <button class="btn btn--accent btn--lg" id="quoteBtn" data-i18n="getQuote"></button>
+        <button class="btn btn--outline btn--lg" id="resetBtn" data-i18n="reset"></button>
+      </div>
+
+      <form class="form" id="quoteForm" hidden>
+        <h3 data-i18n="quoteTitle"></h3>
+        <div class="grid2">
+          <input name="name" data-i18n-ph="yourName" required>
+          <input name="phone" type="tel" dir="ltr" data-i18n-ph="yourPhone" required>
+        </div>
+        <label class="field"><span data-i18n="date"></span><input name="date" type="date"></label>
+        <textarea name="note" rows="3" data-i18n-ph="note"></textarea>
+        <button class="btn btn--wa btn--lg" data-i18n="sendWa"></button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Comparison table -->
+  <section class="wrap compare" id="compare">
+    <h2 class="section-title" data-i18n="compareTitle"></h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th data-i18n="model"></th><th data-i18n="thickness"></th><th data-i18n="warranty"></th>
+          <th data-i18n="finish"></th><th data-i18n="feature"></th><th data-i18n="bestFor"></th>
+        </tr></thead>
+        <tbody id="compareBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Authorized centers -->
+  <section class="wrap centers" id="centers">
+    <div class="section-head">
+      <span class="badge" data-i18n="centersBadge"></span>
+      <h2 data-i18n="centersTitle"></h2>
+      <p class="muted" data-i18n="centersText"></p>
+    </div>
+
+    <div class="filters">
+      <input id="q" type="search" data-i18n-ph="search">
+      <select id="cityFilter"></select>
+      <button class="btn btn--outline" id="nearBtn" data-i18n="near"></button>
+    </div>
+
+    <div class="centers__layout">
+      <div class="centers__list" id="list"></div>
+      <div class="centers__map"><iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+  </section>
+
+  <section class="wrap why">
+    <div class="why__item"><b data-i18n="why1t"></b><span data-i18n="why1"></span></div>
+    <div class="why__item"><b data-i18n="why2t"></b><span data-i18n="why2"></span></div>
+    <div class="why__item"><b data-i18n="why3t"></b><span data-i18n="why3"></span></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span>© <span id="year"></span> <span data-site="name"></span></span>
+    <span><span data-site="address"></span> · <a dir="ltr" data-href="tel" data-site="phone"></a></span>
+  </div>
+</footer>
+
+<a class="wa-float" data-href="whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5s.3-1.4.2-1.5-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script src="data.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

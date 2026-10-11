@@ -1,0 +1,5 @@
+# build output / local tooling
+*.zip
+dist/
+.claude/
+.wrangler/
