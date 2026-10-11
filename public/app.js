@@ -14,8 +14,11 @@ const links = {
 };
 $$("[data-href]").forEach(el => (el.href = links[el.dataset.href]));
 $("#year").textContent = new Date().getFullYear();
-$("#burger").onclick = () => $("#nav").classList.toggle("open");
-$$("#nav a").forEach(a => a.addEventListener("click", () => $("#nav").classList.remove("open")));
+$("#burger").onclick = () => $("#burger").setAttribute("aria-expanded", $("#nav").classList.toggle("open"));
+$$("#nav a").forEach(a => a.addEventListener("click", () => {
+  $("#nav").classList.remove("open");
+  $("#burger").setAttribute("aria-expanded", "false");
+}));
 
 /* ---------- Film picker ---------- */
 const segSel = $("#segment"), prodSel = $("#product");
@@ -36,6 +39,7 @@ function renderDetails() {
 segSel.onchange = prodSel.onchange = renderDetails;
 
 $("#quoteBtn").onclick = () => {
+  $("#quoteForm [name=date]").min = new Date().toLocaleDateString("en-CA"); // no past dates (YYYY-MM-DD)
   $("#quoteForm").hidden = false;
   $("#quoteForm").scrollIntoView({ behavior: "smooth", block: "center" });
   $("#quoteForm [name=name]").focus({ preventScroll: true });
