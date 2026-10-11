@@ -1,0 +1,9 @@
+// Cloudflare Workers config: serves ./public as a static site.
+// "name" must match the Worker in the Cloudflare dashboard.
+{
+  "name": "dark-sun-7536",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public"
+  }
+}
